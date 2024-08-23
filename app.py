@@ -52,7 +52,7 @@ def sign_in():
             else:
                 flash("Unknown error")
                 return redirect(url_for("sign_in"))
-        elif data["email"]=="admin@gmail.com" and data["password"]=="admin@1234":
+        elif data["email"]=="admin@gmail.com" and data["password"]=="admin@123":
                 session["admin"] = data["email"]
                 return redirect(url_for("admin_home"))
         else:
@@ -142,4 +142,4 @@ def query():
 
 
 if __name__ == "__main__":
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True)
